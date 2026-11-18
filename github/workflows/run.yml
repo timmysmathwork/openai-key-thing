@@ -7,9 +7,8 @@ on:
 jobs:
   run-python:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Download repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -23,5 +22,5 @@ jobs:
             pip install -r requirements.txt
           fi
 
-      - name: Run script
+      - name: Run Python
         run: python main.py
